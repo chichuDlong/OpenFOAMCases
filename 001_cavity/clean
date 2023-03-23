@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#----------------------------------------------#
+# Contributor: Tobias Holzmann                 #
+# Last Change: November                        #
+# Topic:                                       #
+# Email:       Tobias.Holzmann@Holzmann-cfd.de #
+#----------------------------------------------#
+
+
+#----------------------------------------------
+cd ${0%/*} || exit 1
+clear
+
+
+#----------------------------------------------
+foamCleanTutorials
+
+
