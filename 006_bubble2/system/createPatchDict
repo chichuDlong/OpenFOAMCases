@@ -1,0 +1,68 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+patches
+(
+    {
+        // Name of new patch
+        name    airInlets;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type    patch;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom set;
+
+        // If constructFrom = set : name of faceSet
+        set     faceGrabbed_1;
+    }
+    {
+        // Name of new patch
+        name    waterInlets;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type    patch;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom set;
+
+        // If constructFrom = set : name of faceSet
+        set     faceGrabbed_2;
+    }
+    {
+        // Name of new patch
+        name    overflow;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type    patch;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom set;
+
+        // If constructFrom = set : name of faceSet
+        set     faceGrabbed_3;
+    }
+);
+
+// ************************************************************************* //
