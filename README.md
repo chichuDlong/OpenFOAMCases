@@ -11,6 +11,10 @@
 以常见圆柱扰流为例说明第三方网格文件如何导入 OpenFOAM，对 OpenFOAM 并行计算进行简要示范。
 
 ---
+## 004_karman2
+OpenFOAM 自带网格划分 snappyHexMesh 全面，但是仅能作用于 3D 网格，本例介绍了 extrudeMesh 的使用方法，配合 snappyHexMesh 能够将 3D 网格转换为 2D 网格，这里以卡门涡街进行简要介绍。 
+
+---
 ## 005_bubble
 1. 介绍 topoSetDict 的基本使用方法；
 2. 介绍 createPatchDict 的基本使用方法；
