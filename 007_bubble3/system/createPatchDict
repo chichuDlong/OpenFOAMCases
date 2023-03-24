@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+pointSync false;
+
+// AMI created from internal boundary with cylinder and cylinder_slave patches
+
+patches
+(
+    {
+        name            airInlets;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom set;
+        set	faceGrabbed_1;
+    }
+
+    {
+        name            waterInlets;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom set;
+        set	faceGrabbed_2;
+    }
+
+
+
+    {
+        name            overflow;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom set;
+        set	faceGrabbed_3;
+    }
+
+);
+
+
+// ************************************************************************* //
