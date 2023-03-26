@@ -27,3 +27,7 @@ OpenFOAM 自带网格划分 snappyHexMesh 全面，但是仅能作用于 3D 网�
 ---
 ## 007_bubble3
 基于 006_bubble2 实现自适应网格加密。
+
+---
+## 008_bullet
+snappyHexMesh，multiPhase，postProcess with probes。

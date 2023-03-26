@@ -1,0 +1,22 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Generate the base block mesh
+runApplication blockMesh
+
+# Generate the snappy mesh
+runApplication snappyHexMesh -overwrite
+
+# Initialise with potentialFoam solution
+runApplication potentialFoam -pName p_rgh
+
+runApplication decomposePar
+
+# Run the solver
+runParallel $(getApplication)
+# runApplication mpiexec -n 4 interFoam -parallel
+
+#------------------------------------------------------------------------------
